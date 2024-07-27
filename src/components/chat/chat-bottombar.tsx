@@ -75,7 +75,7 @@ export default function ChatBottombar({
 
   return (
     <div className="p-2 flex justify-between w-full items-center gap-2">
-      <div className="flex">
+      <div className="flex gap-2">
         <Popover>
           <PopoverTrigger asChild>
             <div
@@ -127,7 +127,7 @@ export default function ChatBottombar({
           </PopoverContent>
         </Popover>
         {!message.trim() && !isMobile && (
-          <div className="flex">
+          <div className="flex gap-2">
             {BottombarIcons.map((icon, index) => (
               <div
                 key={index}

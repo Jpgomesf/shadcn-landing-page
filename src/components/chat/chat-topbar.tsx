@@ -30,7 +30,7 @@ export default function ChatTopbar({ selectedUser }: ChatTopbarProps) {
         </div>
       </div>
 
-      <div>
+      <div className='flex gap-2'>
         {TopbarIcons.map((icon, index) => (
           <a
             key={index}

@@ -9,7 +9,7 @@ interface ChatProps {
   isMobile: boolean;
 }
 
-export function Chat({ messages, selectedUser, isMobile = true }: ChatProps) {
+export function Chat({ messages, selectedUser, isMobile = false }: ChatProps) {
   const [messagesState, setMessages] = React.useState<Message[]>(
     messages ?? []
   );
@@ -19,7 +19,7 @@ export function Chat({ messages, selectedUser, isMobile = true }: ChatProps) {
   };
 
   return (
-    <div className="flex flex-col justify-between w-full h-[600px]">
+    <div className="flex flex-col justify-between w-full h-[620px]">
       <ChatTopbar selectedUser={selectedUser} />
 
       <ChatList

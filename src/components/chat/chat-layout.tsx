@@ -17,7 +17,7 @@ interface ChatLayoutProps {
 
 export function ChatLayout({
   defaultLayout = [320, 480],
-  defaultCollapsed = false,
+  defaultCollapsed = true,
   navCollapsedSize,
 }: ChatLayoutProps) {
   const [isCollapsed, setIsCollapsed] = React.useState(defaultCollapsed);
