@@ -26,7 +26,7 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Free",
+    title: "Free trial",
     popular: 0,
     price: 0,
     description:
@@ -43,7 +43,7 @@ const pricingList: PricingProps[] = [
   {
     title: "Premium",
     popular: 1,
-    price: 5,
+    price: 16,
     description:
       "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
     buttonText: "Start Free Trial",
