@@ -58,7 +58,15 @@ export function ChatList({
               )}
             >
               <div className="flex gap-3 items-center">
-                <span className=" bg-accent p-3 rounded-md max-w-xs">
+                <span className={`p-3 rounded-md max-w-xs
+                  ${message.name === selectedUser.name
+                    ? "bg-accent"
+                    : "bg-green-600 text-white"}`}
+                  style={{
+                    wordBreak: "break-word",
+                    overflowWrap: "break-word",
+                  }}
+                >
                   {message.message}
                 </span>
               </div>
