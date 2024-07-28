@@ -22,7 +22,7 @@ export function ChatLayout({
 }: ChatLayoutProps) {
   const [isCollapsed, setIsCollapsed] = React.useState(defaultCollapsed);
   const [selectedUser, setSelectedUser] = React.useState(userData[0]);
-  const [isMobile, setIsMobile] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkScreenWidth = () => {
