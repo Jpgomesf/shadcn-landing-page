@@ -79,7 +79,7 @@ export function ChatLayout({
             name: user.name,
             messages: user.messages ?? [],
             avatar: user.avatar,
-            variant: "default",
+            variant: selectedUser.name === user.name ? "grey" : "ghost",
           }))}
           isMobile={isMobile}
         />
