@@ -6,7 +6,7 @@ import {
   SendHorizontal,
   ThumbsUp,
 } from "lucide-react";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
@@ -26,36 +26,31 @@ export default function ChatBottombar({
   sendMessage,
   isMobile = false,
 }: ChatBottombarProps) {
-  const [message, setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setMessage(event.target.value);
-  };
 
   const handleThumbsUp = () => {
     const newMessage: Message = {
-      id: message.length + 1,
+      id: new Date().getTime(),
       name: loggedInUserData.name,
       avatar: loggedInUserData.avatar,
       message: "👍",
     };
     sendMessage(newMessage);
-    setMessage("");
   };
 
   const handleSend = () => {
-    if (message.trim()) {
-      const newMessage: Message = {
-        id: message.length + 1,
-        name: loggedInUserData.name,
-        avatar: loggedInUserData.avatar,
-        message: message.trim(),
-      };
-      sendMessage(newMessage);
-      setMessage("");
-
-      if (inputRef.current) {
+    if (inputRef.current) {
+      console.log(inputRef.current.value)
+      const message = inputRef.current.value;
+      if (message.trim()) {
+        const newMessage: Message = {
+          id: new Date().getTime(), // Use timestamp for unique ID
+          name: loggedInUserData.name,
+          avatar: loggedInUserData.avatar,
+          message: message.trim(),
+        };
+        sendMessage(newMessage);
+        inputRef.current.value = ""; // Clear the input value
         inputRef.current.focus();
       }
     }
@@ -65,11 +60,11 @@ export default function ChatBottombar({
     if (event.key === "Enter" && !event.shiftKey) {
       event.preventDefault();
       handleSend();
-    }
-
-    if (event.key === "Enter" && event.shiftKey) {
+    } else if (event.key === "Enter" && event.shiftKey) {
       event.preventDefault();
-      setMessage((prev) => prev + "\n");
+      if (inputRef.current) {
+        inputRef.current.value += "\n";
+      }
     }
   };
 
@@ -89,7 +84,7 @@ export default function ChatBottombar({
             </div>
           </PopoverTrigger>
           <PopoverContent side="top" className="w-full p-2">
-            {message.trim() || isMobile ? (
+            {inputRef.current && inputRef.current.value.trim() || isMobile ? (
               <div className="flex gap-2">
                 <div
                   className={cn(
@@ -126,7 +121,7 @@ export default function ChatBottombar({
             )}
           </PopoverContent>
         </Popover>
-        {!message.trim() && !isMobile && (
+        {!(inputRef.current && inputRef.current.value.trim()) && !isMobile && (
           <div className="flex gap-2">
             {BottombarIcons.map((icon, index) => (
               <div
@@ -162,10 +157,8 @@ export default function ChatBottombar({
         >
           <Textarea
             autoComplete="off"
-            value={message}
             ref={inputRef}
             onKeyDown={handleKeyPress}
-            onChange={handleInputChange}
             name="message"
             placeholder="Aa"
             className="w-full border h-9 rounded-full flex items-center resize-none overflow-hidden bg-background"
@@ -173,16 +166,16 @@ export default function ChatBottombar({
           <div className="absolute right-2 bottom-0.5">
             <EmojiPicker
               onChange={(value: any) => {
-                setMessage(message + value);
                 if (inputRef.current) {
-                  inputRef.current.focus();
+                  inputRef.current.value += value
+                  inputRef.current.focus()
                 }
               }}
             />
           </div>
         </motion.div>
 
-        {message.trim() ? (
+        {inputRef.current && (
           <div
             className={cn(
               buttonVariants({ variant: "ghost", size: "icon" }),
@@ -192,17 +185,6 @@ export default function ChatBottombar({
             onClick={handleSend}
           >
             <SendHorizontal size={20} className="text-muted-foreground" />
-          </div>
-        ) : (
-          <div
-            className={cn(
-              buttonVariants({ variant: "ghost", size: "icon" }),
-              "h-9 w-9",
-              "dark:bg-muted dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-white shrink-0"
-            )}
-            onClick={handleThumbsUp}
-          >
-            <ThumbsUp size={20} className="text-muted-foreground" />
           </div>
         )}
       </AnimatePresence>
