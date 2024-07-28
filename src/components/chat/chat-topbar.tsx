@@ -1,6 +1,21 @@
 import { Avatar, AvatarImage } from '../ui/avatar'
 import { UserData } from '../../data/data';
-import { Info, Phone, Video } from 'lucide-react';
+import {
+  Info,
+  Phone,
+  Video,
+  Trash,
+  Tags,
+  CalendarClockIcon,
+  CircleCheckBig,
+  Pen,
+} from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+  TooltipProvider,
+} from "../ui/tooltip";
 import { cn } from '../../lib/utils';
 import { buttonVariants } from '../ui/button';
 
@@ -8,7 +23,13 @@ interface ChatTopbarProps {
   selectedUser: UserData;
 }
 
-export const TopbarIcons = [{ icon: Phone }, { icon: Video }, { icon: Info }];
+export const TopbarCallIcons = [{ icon: Phone }, { icon: Video }, { icon: Info },];
+export const TopbarTicketIcons = [
+  { icon: Tags, tooltip: "Add a Tag" },
+  { icon: Pen, tooltip: "Edit Ticket" },
+  { icon: CalendarClockIcon, tooltip: "Schedule" },
+  { icon: Trash, tooltip: "Delete Ticket" },
+  { icon: CircleCheckBig, tooltip: "Finish Ticket" }]
 
 
 export default function ChatTopbar({ selectedUser }: ChatTopbarProps) {
@@ -31,7 +52,29 @@ export default function ChatTopbar({ selectedUser }: ChatTopbarProps) {
       </div>
 
       <div className='flex gap-2'>
-        {TopbarIcons.map((icon, index) => (
+        {TopbarTicketIcons.map((icon, index) => (
+          <TooltipProvider key={index}>
+            <Tooltip key={index}>
+              <TooltipTrigger asChild>
+                <div
+                  key={index}
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "icon" }),
+                    "h-9 w-9 cursor-pointer",
+                    "dark:bg-muted dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-white"
+                  )}
+                >
+                  <icon.icon size={20} className="text-muted-foreground" />
+                </div>
+              </TooltipTrigger>
+              <TooltipContent side="bottom">{icon.tooltip}</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ))}
+      </div>
+
+      <div className='flex gap-2'>
+        {TopbarCallIcons.map((icon, index) => (
           <a
             key={index}
             href="#"

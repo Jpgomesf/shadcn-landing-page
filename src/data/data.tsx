@@ -2,6 +2,7 @@ export const userData = [
   {
     id: 1,
     avatar: '/User1.png',
+    name: 'Jane Doe',
     messages: [
       {
         id: 1,
@@ -57,8 +58,7 @@ export const userData = [
         name: 'Jane Doe',
         message: 'I had a relaxing day. Just catching up on some reading.',
       }
-    ],
-    name: 'Jane Doe',
+    ]
   },
   {
     id: 2,
@@ -97,6 +97,6 @@ export interface Message {
 export interface User {
   id: number;
   avatar: string;
-  messages: Message[];
   name: string;
+  messages: Message[];
 }

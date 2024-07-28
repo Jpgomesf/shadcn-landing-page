@@ -58,10 +58,10 @@ export function ChatList({
               )}
             >
               <div className="flex gap-3 items-center">
-                <span className={`p-3 rounded-md max-w-xs
+                <span className={`p-3 rounded-b-xl max-w-xs
                   ${message.name === selectedUser.name
-                    ? "bg-accent"
-                    : "bg-green-600 text-white"}`}
+                    ? "bg-accent rounded-tr-xl"
+                    : "bg-green-600 rounded-tl-xl text-white"}`}
                   style={{
                     wordBreak: "break-word",
                     overflowWrap: "break-word",
