@@ -27,6 +27,7 @@ export function ChatLayout({
   useEffect(() => {
     const checkScreenWidth = () => {
       setIsMobile(window.innerWidth <= 768);
+      console.log(setSelectedUser(userData[0]))
     };
 
     // Initial check

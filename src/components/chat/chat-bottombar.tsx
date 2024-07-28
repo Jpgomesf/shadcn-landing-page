@@ -4,7 +4,6 @@ import {
   Paperclip,
   PlusCircle,
   SendHorizontal,
-  ThumbsUp,
 } from "lucide-react";
 import React, { useRef } from "react";
 import { buttonVariants } from "../ui/button";
@@ -27,16 +26,6 @@ export default function ChatBottombar({
   isMobile = false,
 }: ChatBottombarProps) {
   const inputRef = useRef<HTMLTextAreaElement>(null);
-
-  const handleThumbsUp = () => {
-    const newMessage: Message = {
-      id: new Date().getTime(),
-      name: loggedInUserData.name,
-      avatar: loggedInUserData.avatar,
-      message: "👍",
-    };
-    sendMessage(newMessage);
-  };
 
   const handleSend = () => {
     if (inputRef.current) {
