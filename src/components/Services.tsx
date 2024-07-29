@@ -10,21 +10,21 @@ interface ServiceProps {
 
 const serviceList: ServiceProps[] = [
   {
-    title: "Code Collaboration",
+    title: "Customer Interaction Management",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Optimize every customer interaction with our intelligent CRM tools, ensuring personalized and effective communication across all channels.",
     icon: <ChartIcon />,
   },
   {
-    title: "Project Management",
+    title: "Sales Pipeline Tracking",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Monitor and manage your sales pipeline efficiently, from lead generation to deal closure, with real-time insights and automated tracking.",
     icon: <WalletIcon />,
   },
   {
     title: "Task Automation",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Automate repetitive tasks and focus on what truly matters, increasing efficiency and reducing manual workload.",
     icon: <MagnifierIcon />,
   },
 ];

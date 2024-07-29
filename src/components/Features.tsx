@@ -20,19 +20,19 @@ const features: FeatureProps[] = [
   {
     title: "Responsive Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Our CRM platform adapts seamlessly to any device, ensuring a smooth and consistent user experience whether you're on a desktop, tablet, or mobile phone.",
     image: image4,
   },
   {
     title: "Intuitive user interface",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Designed with users in mind, our CRM features an intuitive interface that simplifies navigation and enhances productivity, making complex tasks effortless.",
     image: image3,
   },
   {
     title: "AI-Powered insights",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Harness the power of artificial intelligence to gain deep insights into customer behavior and trends, enabling data-driven decisions that propel your business forward.",
     image: image,
   },
 ];

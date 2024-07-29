@@ -23,11 +23,11 @@ export const About = () => {
                 Company
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
+                We revolutionize customer relationship management (CRM) with AI-powered chat bots.
+                Our mission is to empower businesses with innovative solutions,
+                enhancing customer engagement and efficiency.
+                With a strong focus on security and privacy,
+                we ensure your data is protected while delivering exceptional service.
               </p>
             </div>
 

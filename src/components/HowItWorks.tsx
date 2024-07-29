@@ -12,25 +12,26 @@ const features: FeatureProps[] = [
     icon: <MedalIcon />,
     title: "Accessibility",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "We ensure our CRM solutions are accessible to all users, offering intuitive interfaces and seamless integration with your existing systems.",
+
   },
   {
     icon: <MapIcon />,
     title: "Community",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Join a thriving community of users and experts who share insights, best practices, and support each other in maximizing the potential of our CRM tools.",
   },
   {
     icon: <PlaneIcon />,
     title: "Scalability",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Our CRMs are designed to grow with your business, providing scalable solutions that adapt to your evolving needs and increasing customer base.",
   },
   {
     icon: <GiftIcon />,
     title: "Gamification",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Enhance user engagement with built-in gamification features that motivate and reward your team, driving productivity and satisfaction.",
   },
 ];
 
@@ -47,10 +48,6 @@ export const HowItWorks = () => {
         </span>
         Step-by-Step Guide
       </h2>
-      <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
-      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map(({ icon, title, description }: FeatureProps) => (

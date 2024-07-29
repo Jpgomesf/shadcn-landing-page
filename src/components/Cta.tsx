@@ -12,14 +12,14 @@ export const Cta = () => {
             All Your
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
               {" "}
-              Ideas & Concepts{" "}
+              Customer Data & Interactions{" "}
             </span>
             In One Interface
           </h2>
           <p className="text-muted-foreground text-xl mt-4 mb-8 lg:mb-0">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-            beatae. Ipsa tempore ipsum iste quibusdam illum ducimus eos. Quasi,
-            sed!
+            Consolidate all your customer data and interactions in a single, intuitive interface.
+            Our CRM platform ensures seamless access to valuable insights and communication tools,
+            helping you manage and grow your customer relationships effectively.
           </p>
         </div>
 
