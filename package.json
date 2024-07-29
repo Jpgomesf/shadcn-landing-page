@@ -1,10 +1,10 @@
 {
-  "name": "shadcn-landing-page-template",
+  "name": "shadcn-landing-page-crm",
   "description": "Landing page template utilizing Shadcn, React, Typescript, and Tailwind CSS for rapid development and responsive design.",
   "author": {
-    "name": "Leopoldo Miranda",
-    "email": "leomirandadev@gmail.com",
-    "url": "https://github.com/leoMirandaa"
+    "name": "jpgomesf",
+    "email": "jppromus@gmail.com",
+    "url": "https://github.com/Jpgomesf"
   },
   "license": "MIT",
   "keywords": [
