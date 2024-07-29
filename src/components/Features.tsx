@@ -18,16 +18,14 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
-    description:
-      "Our CRM platform adapts seamlessly to any device, ensuring a smooth and consistent user experience whether you're on a desktop, tablet, or mobile phone.",
-    image: image4,
+    "title": "AI-Powered Chatbots",
+    "description": "Leverage our advanced AI-powered chatbots to provide instant, personalized responses to your customers, enhancing engagement and satisfaction around the clock.",
+    "image": image4
   },
   {
-    title: "Intuitive user interface",
-    description:
-      "Designed with users in mind, our CRM features an intuitive interface that simplifies navigation and enhances productivity, making complex tasks effortless.",
-    image: image3,
+    "title": "Integration with Popular Chats",
+    "description": "Our CRM seamlessly integrates with the most popular chat platforms like WhatsApp, Telegram, and Instagram, allowing you to manage all customer interactions in one place.",
+    "image": image3
   },
   {
     title: "AI-Powered insights",
