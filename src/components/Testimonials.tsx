@@ -16,50 +16,52 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe",
-    comment: "This landing page is awesome!",
+    image: "",
+    name: "John Cross",
+    userName: "@john_cross",
+    comment: "Using this CRM has revolutionized the way we handle customer interactions. The AI-driven insights are invaluable!",
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe1",
+    image: "",
+    name: "Jane Smith",
+    userName: "@janesmith",
     comment:
-      "Lorem ipsum dolor sit amet,empor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+      "I love how intuitive and user-friendly this CRM is. Our team became more efficient almost overnight!",
   },
 
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe2",
+    image: "",
+    name: "Michael Johnson",
+    userName: "@mjohnson",
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "The integration with our existing systems was seamless, and the level of customization available is fantastic.",
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe3",
+    image: "",
+    name: "Emily Brown",
+    userName: "@emily_brown",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "The AI-powered analytics provide deep insights that help us tailor our marketing strategies more effectively.",
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe4",
+    image: "",
+    name: "Chris Wilson",
+    userName: "@chrisw1984",
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud.",
+      "We saw a 30% increase in customer satisfaction scores within the first three months of using this CRM. Highly recommend!",
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe5",
+    image: "",
+    name: "Sophia Lee",
+    userName: "@sophia_lee",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Our sales team loves the automated workflows. It's like having an extra set of hands to help manage leads and follow-ups.",
   },
 ];
 
 export const Testimonials = () => {
+  const getInitials = (name: string) => name.split(' ').map(part => part[0].toUpperCase()).join('')
+
   return (
     <section
       id="testimonials"
@@ -71,12 +73,13 @@ export const Testimonials = () => {
           {" "}
           People Love{" "}
         </span>
-        This Landing Page
+        Us
       </h2>
 
       <p className="text-xl text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde error
-        facere hic reiciendis illo
+        See how our AI-powered CRM transforms businesses with increased efficiency,
+        seamless integration, and deep insights.
+        Trusted by satisfied users to handle their customer interactions and marketing strategies.
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">
@@ -92,7 +95,7 @@ export const Testimonials = () => {
                     alt=""
                     src={image}
                   />
-                  <AvatarFallback>OM</AvatarFallback>
+                  <AvatarFallback>{getInitials(name)}</AvatarFallback>
                 </Avatar>
 
                 <div className="flex flex-col">
