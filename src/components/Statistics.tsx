@@ -13,11 +13,15 @@ export const Statistics = () => {
       quantity: "1.8K+",
       description: "Subscribers",
     },
+    {
+      quantity: "1.2M+",
+      description: "Messages",
+    }
   ];
 
   return (
     <section id="statistics">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
         {stats.map(({ quantity, description }: statsProps) => (
           <div
             key={description}
