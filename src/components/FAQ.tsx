@@ -13,35 +13,30 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free ChadcnUI template.",
-    value: "item-1",
+    "question": "Is this CRM free?",
+    "answer": "Yes, our basic CRM template is free to use. However, advanced features may require a subscription.",
+    "value": "item-1"
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
-    value: "item-2",
+    "question": "How secure is the data stored in your CRM?",
+    "answer": "We prioritize data security with end-to-end encryption and regular security audits to ensure your data is protected.",
+    "value": "item-2"
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
-    value: "item-3",
+    "question": "Can I integrate this CRM with other tools?",
+    "answer": "Absolutely! Our CRM supports integrations with popular tools like Slack, Zapier, and Google Workspace.",
+    "value": "item-3"
   },
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    value: "item-4",
+    "question": "Is there customer support available?",
+    "answer": "Yes, we offer 24/7 customer support via chat, email, and phone to assist you with any issues or questions.",
+    "value": "item-4"
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
-    value: "item-5",
-  },
+    "question": "Can I customize the CRM to fit my business needs?",
+    "answer": "Yes, our CRM is highly customizable to meet the specific requirements of your business.",
+    "value": "item-5"
+  }
 ];
 
 export const FAQ = () => {
