@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Adjust the width to match ChatGPT's */
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--scrollbar-track));
+  /* Background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--scrollbar));
+  /* Color of the scrollbar thumb */
+  border-radius: 10px;
+  /* Rounded corners */
+  border: 3px solid hsl(var(--scrollbar-track));
+  /* Padding around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--scrollbar-hover));
+  /* Color on hover */
+}
+
 /* *=========== Default theme =========== */
 /* @layer base {
   :root {
@@ -90,6 +115,10 @@
     --input: 240 5.9% 90%;
     --ring: 142.1 76.2% 36.3%;
     --radius: 0.5rem;
+
+    --scrollbar: 0, 0%, 80%;
+    --scrollbar-hover: 0, 0%, 70%;
+    --scrollbar-track: 0, 0%, 90%;
   }
 
   .dark {
@@ -112,6 +141,10 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 142.4 71.8% 29.2%;
+
+    --scrollbar: 0, 0%, 40%;
+    --scrollbar-hover: 0, 0%, 30%;
+    --scrollbar-track: 0, 0%, 20%;
   }
 }
 
@@ -119,6 +152,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

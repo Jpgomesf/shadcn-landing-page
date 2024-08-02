@@ -50,11 +50,20 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        scrollbar: {
+          DEFAULT: "hsl(var(--scrollbar))",
+          hover: "hsl(var(--scrollbar-hover))",
+          track: "hsl(var(--scrollbar-track))"
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        scrollbar: "10px", // Scrollbar border radius
+      },
+      borderWidth: {
+        scrollbar: "3px",  // Scrollbar border width
       },
       keyframes: {
         "accordion-down": {
