@@ -26,50 +26,47 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Free trial",
-    popular: 0,
-    price: 0,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
-    benefitList: [
-      "1 Team member",
+    "title": "Free trial",
+    "popular": 0,
+    "price": 0,
+    "description": "Experience our core features at no cost for 3 days. Ideal for individuals or small teams just getting started.",
+    "buttonText": "Get Started",
+    "benefitList": [
+      "5 Team member",
       "2 GB Storage",
-      "Upto 4 pages",
+      "Up to 2 connections",
       "Community support",
-      "lorem ipsum dolor",
-    ],
+      "AI Trial"
+    ]
   },
   {
-    title: "Premium",
-    popular: 1,
-    price: 16,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
-    benefitList: [
-      "4 Team member",
+    "title": "Premium",
+    "popular": 1,
+    "price": 40,
+    "description": "Unlock advanced features and greater capacity. Perfect for growing teams looking to enhance their productivity.",
+    "buttonText": "Start Free Trial",
+    "benefitList": [
+      "25 Team members",
       "4 GB Storage",
-      "Upto 6 pages",
+      "Up to 6 connections",
       "Priority support",
-      "lorem ipsum dolor",
-    ],
+      "Enhanced AI capabilities"
+    ]
   },
   {
-    title: "Enterprise",
-    popular: 0,
-    price: 40,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
-    benefitList: [
-      "10 Team member",
+    "title": "Enterprise",
+    "popular": 0,
+    "price": 100,
+    "description": "Comprehensive solution for large teams requiring robust storage and premium support.",
+    "buttonText": "Contact Us",
+    "benefitList": [
+      "100 Team members",
       "8 GB Storage",
-      "Upto 10 pages",
+      "Up to 10 connections",
       "Priority support",
-      "lorem ipsum dolor",
-    ],
-  },
+      "Full AI integration"
+    ]
+  }
 ];
 
 export const Pricing = () => {
@@ -78,7 +75,7 @@ export const Pricing = () => {
       id="pricing"
       className="container py-24 sm:py-32"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-center">
+      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
         Get
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
@@ -86,10 +83,6 @@ export const Pricing = () => {
         </span>
         Access
       </h2>
-      <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
-      </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingList.map((pricing: PricingProps) => (
           <Card
